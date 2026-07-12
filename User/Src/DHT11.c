@@ -27,13 +27,13 @@ uint8_t GPIO_InitOutput(GPIO_TypeDef  *GPIOx, uint8_t pinNumber)
 	GPIO_InitTypeDef GPIO_InitStruct = { 0 };
 
 	/*Configure GPIO pin Output Level */
-	HAL_GPIO_WritePin(*GPIOx, pinNumber, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(GPIOx, pinNumber, GPIO_PIN_SET);
 
 	GPIO_InitStruct.Pin = pinNumber;
 	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
 	GPIO_InitStruct.Pull = GPIO_PULLUP;
 	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-	HAL_GPIO_Init(*GPIOx, &GPIO_InitStruct);
+	HAL_GPIO_Init(GPIOx, &GPIO_InitStruct);
 }
 /*
  * Определение пина как вход

@@ -8,6 +8,8 @@
 #ifndef INC_DHT11_H_
 #define INC_DHT11_H_
 
+//#define HAL_TIM_MODULE_ENABLED
+
 uint8_t DHT11_Init (GPIO_TypeDef  *GPIOx, uint8_t pinNumber);
 
 
